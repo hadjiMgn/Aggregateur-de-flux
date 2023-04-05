@@ -1,0 +1,6 @@
+sources:
+  - rss2.xml
+
+rss-name: flux.rss
+destination: test1.html
+tri-chrono: true

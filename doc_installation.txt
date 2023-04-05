@@ -1,0 +1,61 @@
+Hadji MOUIGNI
+===============
+
+A LIRE ATTENTIVEMENT AVANT TOUTE UTILISATION DU PROGRAMME aggreg.py:
+
+Ce document permet de vous guider afin de mener à bien l'utilisation du programme aggreg.py, veuillez respecter ce  qui vous sera demandé.
+------------------------------------------------------------------------------------------------------------------------------------------
+Dans l'explication on appellera la machine qui contient le programme aggreg.py: " l'agregateur "
+
+Pré-requis:
+------------
+En premier lieu vous devez disposer d'un réseau fonctionnel.
+Ensuite, l'agregateur doit IMPÉRATIVEMENT avoir "python3", d'installé ainsi que les modules suivants : 
+                          __
+- feedparser                |
+- yaml                      |-- (Installation à l'aide de la commande : apt install python3-"nom du paquet" )
+- time                    __|
+
+Paramètres des machines:
+------------------------
+Agregateur : 
+
+- Un fichier OBLIGATOIREMENT nommé "conf.yaml" doit être dans le répertoire "/etc" avec les autres fichiers de configuration :
+		
+
+	-Structure du fichier : "  sources : 
+					- http://"nom_serveur/
+				     rss-name : "nom des fichiers RSS" (ATTENTION, le nom du fichier doit être le même pour tout les serveurs)
+				     destination : "emplacement de la page html" ==> Pour que ce soit consultable , mettre /var/www/nom_machine/
+
+
+
+	- Affichage de la page HTML : vous pouvez personnaliser le style de la page HTML soit en modifiant directement le fichier /var/www/aggreg/style.css
+				      ou en important le votre en le renommant "style.css". Vous pouvez aussi, si vous avez des connaissances, garder le nom
+				      fichier mais en allant modifier directement dans le fichier aggreg.py la ligne qui importe le fichier CSS 
+				      (fonction genere_html)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+F.A.Q 
+------
+1) Peut-on appliquer ce programme sur Windows ?
+    - Oui. C'est tout à fait possible mais il faut toujours le fichier conf.yaml
+
+2) Puis-je gérer l'automatisation de mes flux RSS ?
+    - En tapant : "crontab -e" vous pourrez modifier les éventuelles automatisations
+
+3)Pourquoi je reçoit des flux mais l'affichage est lambda ?
+    - Il faut aller voir si la feuille de style CSS à bien été appliquée
+
+4) Que faire si je ne voit aucun flux sur la page HTML ?
+    - Commencez par vérifier si vos serveurs sont toujours en marche ou alors vérifiez la destination du fichier yaml.conf
+
+5) Que faire si malgré tout cela rien ne fonctionne ?
+    - Si le probleme persiste veuillez nous contacter à cette adresse : hadji.mouigni@etu.univ-amu.fr
+Nous vous répondrons le plus rapidement possible
+
+
+
+
+
+

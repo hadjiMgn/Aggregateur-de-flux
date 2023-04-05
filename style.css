@@ -1,0 +1,29 @@
+html {
+    background: rgb(162, 159, 160);
+}
+
+*{
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+article > article {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-right: 45px;
+    margin-left: 45px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.MAJOR {
+	color: orange;
+}
+
+.CRITICAL{
+	color: red;	
+}
+
+.MINOR{
+	color: green;
+}
